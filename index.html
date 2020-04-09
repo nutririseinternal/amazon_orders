@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriRise Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h1>NutriRise Amazon Orders Dashboard</h1>
+          </div>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- <div class="well"> -->
+            <ul class = 'bg-light list-group'>
+                <li class = 'bg-light, list-group-item'>
+                    <label for = 'month'>Month</label>
+                    <select id="selMonth" onchange="monthChanged(this.value)">
+                        <option></option>
+                        <option value = "march">March</option>
+                        <option value = "april">April</option>
+                    </select>
+                </li>
+            </ul>
+        </div> 
+    </div>
+    <div class = "row">
+        <div class="col-md-3">
+            <!-- <div class="well"> -->
+                <!-- <h3>Repeat Purchase</h3> -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Repeat Purchase</h3>
+                </div>
+                    <div id="rep_pur" class="panel-body"></div>
+            </div>
+        </div> 
+        <div class = "col-md-9">
+                <div id = "rep_pur_pie"></div>
+        </div>
+    
+        
+    </div>
+    <div class = "row">
+        <div class="col-md-3">
+            <!-- <div class="well"> -->
+                <!-- <h3>Repeat Purchase</h3> -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Multiple Quantity/Order</h3>
+                </div>
+                    <div id="multi_quan" class="panel-body"></div>
+            </div>
+        </div> 
+        <div class = "col-md-9">
+                <div id = "multi_quan_pie"></div>
+        </div>
+    
+        
+    </div>
+    
+    <div class = "row">
+        <div class="col-md-3">
+            <!-- <div class="well"> -->
+            <!-- <h3>Multiple Products/Order</h3> -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Multiple Products/Order</h3>
+                </div>
+                <div id="multi_prod" class="panel-body"></div>
+            </div>
+        </div> 
+       
+        <div class = "col-md-8">
+            <div id = "multi_prod_perorder_pie"></div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-md-4">
+            <!-- <div class="well"> -->
+            <!-- <h3>Multiple Products/Order</h3> -->
+            <ul class = 'bg-light list-group'>
+                <li class = 'bg-light, list-group-item'>
+                    <label for = 'product'>Product</label>
+                    <select id="selProd" onchange="prodChanged(this.value)">
+                        <option></option>
+                        <option value = "ash">Ashwagandha</option>
+                        <option value = "glu">Glucosamine</option>
+                    </select>
+                </li>
+            </ul>
+        </div> 
+       
+        <div class = "col-md-8">
+            <div id = "prod_pairing_pie"></div>
+        </div>
+    </div>
+    </div>  
+    </div>  
+    
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script> -->
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <script src="plots.js"></script> 
+
+</body>
+</html>
